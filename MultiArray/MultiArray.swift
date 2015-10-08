@@ -41,11 +41,11 @@ class MultiArray<T>{
     
     subscript(n:Int...) -> T{
         get{
-            assert(indexIsValid(n))
+            assert(indexIsValid(n),"index out of range")
             return data[createIndex(n)]!
         }
         set{
-            assert(indexIsValid(n))
+            assert(indexIsValid(n),"index out of range")
             createIndex(n)
             data[createIndex(n)] = newValue
         }
