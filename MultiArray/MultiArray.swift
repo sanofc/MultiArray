@@ -45,7 +45,6 @@ class MultiArray<T>{
         }
         set{
             assert(indexIsValid(n),"index out of range")
-            createIndex(n)
             data[createIndex(n)] = newValue
         }
     }
