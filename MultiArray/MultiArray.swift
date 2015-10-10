@@ -15,8 +15,7 @@ class MultiArray<T>{
     
     init(size:Int...){
         self.size = size
-        let multiply = { (a:Int, b:Int) -> Int in a * b}
-        data = [T?](count: size.reduce(1,combine: multiply), repeatedValue: nil)
+        data = [T?](count: size.reduce(1,combine: * ), repeatedValue: nil)
     }
     
     func indexIsValid(indeces:[Int]) -> Bool{
